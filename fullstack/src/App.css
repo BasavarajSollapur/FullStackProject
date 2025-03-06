@@ -1,0 +1,126 @@
+  .marquee {
+  background-color:white; /* Background color of the marquee */
+  color: blue;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 35s linear infinite;
+}
+
+.marquee:hover .marquee-text {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color:white;
+  padding: 10px 20px;
+  color: black;
+  justify-content: left;
+}
+
+.logo {
+  width: 70px; /* Set the size of the logo */
+  height: 70px;
+  margin-right: 15px;
+  
+}
+
+.college-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: #333;
+}
+
+
+.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: blue;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@keyframes slideshow {
+  0% { background-image: url('https://media.istockphoto.com/id/1448837300/photo/university-robotics-lecture-black-teacher-explain-engineering-to-students-she-uses.jpg?s=612x612&w=0&k=20&c=8-nXL1Z8VTIb2BaDvyJn5Kft_f2cIx1tC-AXV3Bf1Qw='); }
+  33% { background-image: url('https://media.istockphoto.com/id/1448502106/photo/in-robotics-development-laboratory-black-female-teacher-and-two-students-work-with-prototype.jpg?s=612x612&w=0&k=20&c=5h_dTnP7UmRi_r8pg9vL72SDrg_qbvymJZsYfuW_t60='); }
+  66% { background-image: url('https://media.istockphoto.com/id/939501682/photo/young-students-of-robotics-working-on-project.jpg?s=612x612&w=0&k=20&c=SntGeJHOxxuUo_Wwi-gGmJfow2CTxrJfxoKfMN0QA6M='); }
+  100% { background-image: url('https://media.istockphoto.com/id/1461626406/photo/computer-science-engineer-in-virtual-reality-headset-using-controllers-and-operating-robot.jpg?s=612x612&w=0&k=20&c=OVmfOM8WEwIb3EXDdKBFw_3Cpzy14_WbxULX-YC4WYo='); }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  animation: slideshow 15s infinite; /* Change every 5 seconds */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
